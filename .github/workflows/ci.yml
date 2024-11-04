@@ -35,4 +35,6 @@ jobs:
           restore-keys: |
             mkdocs-material-
       - run: pip install mkdocs-material 
+      - run: npm install -g staticrypt
+      - run: find ./encrypted/* -type f -name "*.html" -exec staticrypt{} --short -p ${{ secrets.STATICRYPT_PASSWORD }} -r -d encrypted \;
       - run: mkdocs gh-deploy --force
