@@ -1,4 +1,4 @@
-site_name: My site
+site_name: Kubebox Documentation
 site_url: https://dgops-kubernetes.github.io/kubebox-docs
 theme:
   name: material
