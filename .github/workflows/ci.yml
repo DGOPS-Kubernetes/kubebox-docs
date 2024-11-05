@@ -44,4 +44,5 @@ jobs:
           ref: gh-pages
       # - run: echo "./"; ls -la ./; echo "./encrypted/test"; ls -la ./encrypted/test; cat ./encrypted/test/index.html
       - run: find ./encrypted/* -type f -name "*.html" -exec staticrypt {} -d encrypted -p ${{ secrets.STATICRYPT_PASSWORD }} -r \;
+      - run: find ./encrypted/* -type f -name "*.html"
       # - run: cat ./encrypted/test/index.html
