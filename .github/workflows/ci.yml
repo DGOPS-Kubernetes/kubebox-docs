@@ -42,6 +42,6 @@ jobs:
       - uses: actions/checkout@v4
         with:
           ref: gh-pages
-      - run: echo "./"; ls -la ./; echo "./encrypted/test"; ls -la ./encrypted/test; cat ./encrypted/test/index.html
-      - run: find ./encrypted/* -type f -name "*.html" -exec staticrypt {} -d encrypted -p ${{ secrets.STATICRYPT_PASSWORD }} -r --short \;
-      - run: cat ./encrypted/test/index.html
+      # - run: echo "./"; ls -la ./; echo "./encrypted/test"; ls -la ./encrypted/test; cat ./encrypted/test/index.html
+      - run: find ./encrypted/* -type f -name "*.html" -exec staticrypt {} -d encrypted -p ${{ secrets.STATICRYPT_PASSWORD }} -r \;
+      # - run: cat ./encrypted/test/index.html
