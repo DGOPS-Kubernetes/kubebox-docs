@@ -43,4 +43,4 @@ jobs:
       - uses: actions/checkout@v4
         with:
           ref: gh-pages
-      - run: echo "./docs/encrypted"; ls -la ./docs/encrypted; echo "./"; ls -la ./; echo "./docs"; ls -la ./docs; echo "./encrypted"; ls -la./encrypted
+      - run: echo "./"; ls -la ./; echo "./docs"; ls -la ./docs; echo "./encrypted"; ls -la./encrypted
