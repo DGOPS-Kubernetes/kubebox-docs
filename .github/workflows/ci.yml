@@ -40,4 +40,7 @@ jobs:
       - run: find ./docs/encrypted/* -type f -name "*.html"
       - run: find ./docs/encrypted/* -type f -name "*.html" -exec staticrypt{} -p ${{ secrets.STATICRYPT_PASSWORD }} -r -d encrypted \;
       - run: mkdocs gh-deploy --force
-      - run: ls -la ./docs/encrypted; ls -la ./; ls -la ./docs
+      - uses: actions/checkout@v4
+        with:
+          ref: gh-pages
+      - run: echo "./docs/encrypted"; ls -la ./docs/encrypted; echo "./"; ls -la ./; echo "./docs"; ls -la ./docs; echo "./encrypted"; ls -la./encrypted
